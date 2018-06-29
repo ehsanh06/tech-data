@@ -5,10 +5,10 @@ let gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('css', function () {
-    return gulp.src('./src/sass/**/styles.scss')
+    return gulp.src('./src/sass/**/main.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('./public/css'))
+        .pipe(gulp.dest('./dist/css'))
 });
 
 gulp.task('js', function () {
@@ -16,7 +16,9 @@ gulp.task('js', function () {
         .pipe(sourcemaps.init())
         .pipe(concat('app.min.js'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/js'))
+        .pipe(gulp.dest('./dist/js'))
 });
 
-gulp.task('default', ['css', 'js']);
+gulp.task('default', function() {
+    gulp.watch('./src/sass/**/*.scss', ['css']);
+});
