@@ -1,0 +1,33 @@
+@import './_variables.scss';
+
+// Custom Font
+@font-face {
+    font-family: 'worksans-bold';
+    src: url("./fonts/worksans-bold-webfont.woff") format("woff"), // Fairly Modern Browsers
+    url("./fonts/worksans-bold-webfont.woff2") format("woff2"), // Super Modern Browsers
+    url("./fonts/worksans-bold-webfont.ttf") format("truetype"); // Safari, Android, iOS
+}
+
+@font-face {
+    font-family: 'worksans-light';
+    src: url("./fonts/worksans-light-webfont.woff") format("woff"), // Fairly Modern Browsers
+    url("./fonts/worksans-light-webfont.woff2") format("woff2"), // Super Modern Browsers
+    url("./fonts/worksans-light-webfont.tff") format("truetype"); // Safari, Android, iOS
+}
+
+// Heading
+h2 {
+    font-size: 1.6em;
+    color: $font-blue;
+    font-family: 'worksans-bold', sans-serif;
+}
+
+// Normal text
+p, span {
+    color: $font-black;
+    font-size: 1.3em;
+}
+
+label {
+    color: $font-blue;
+}

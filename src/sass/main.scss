@@ -1,0 +1,16 @@
+@import './_reset.scss';
+@import './_typography.scss';
+@import './_variables.scss';
+
+// Header
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: $background-white;
+
+    div {
+        width: 300px;
+        padding: 1em;
+    }
+}
