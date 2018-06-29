@@ -3,3 +3,11 @@ $font-blue:#00548d;
 $font-black: #000;
 $background-green: #c4d600;
 $background-white: #fff;
+$background-blue: #4EC3E0;
+$backgroud-lblue: #EEF9FC;
+
+// Mixins
+@mixin flex($property) {
+    display: flex;
+    justify-content: $property;
+}
