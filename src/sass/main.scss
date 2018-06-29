@@ -154,5 +154,9 @@ footer {
         display: flex;
         flex-direction: column;
         background: $background-green;
+
+        p:last-child {
+            padding: 1em 0 0 0;
+        }
     }
 }
