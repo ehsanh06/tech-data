@@ -1,0 +1,15 @@
+{
+  "name": "creative-digital",
+  "version": "1.0.0",
+  "description": "Creative Digital landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gameyfi",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-cli": "^2.0.1",
+    "http-server": "^0.11.1"
+  }
+}
