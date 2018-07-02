@@ -5,11 +5,9 @@
 
         // Get the form fields and remove whitespace.
         $fname = strip_tags(trim($_POST["fname"]));
-        $fname = str_replace(array("\r","\n"),array(" "," "),$fname);
         $lname = strip_tags(trim($_POST["lname"]));
-        $lname = str_replace(array("\r","\n"),array(" "," "),$lname);
-        $cname = strip_tags(trim($_POST["cname"]));
-        $cname = str_replace(array("\r","\n"),array(" "," "),$cname);
+        $name = str_replace(array("\r","\n"),array(" "," "),$fname . $lname);
+        $cname = strip_tags(trim($_POST["company"]));
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 
         // Check that data was sent to the mailer.
