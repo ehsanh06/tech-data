@@ -5,13 +5,15 @@
 
         // Get the form fields and remove whitespace.
         $fname = strip_tags(trim($_POST["fname"]));
+        $fname = str_replace(array("\r","\n"),array(" "," "),$fname);
         $lname = strip_tags(trim($_POST["lname"]));
-        $name = str_replace(array("\r","\n"), array($name .= $lname));
+        $lname = str_replace(array("\r","\n"),array(" "," "),$lname);
+        $cname = strip_tags(trim($_POST["cname"]));
+        $cname = str_replace(array("\r","\n"),array(" "," "),$cname);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $company = trim($_POST["company"]);
 
         // Check that data was sent to the mailer.
-        if (empty($name) OR empty($company) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (empty($name) OR empty($cname) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
@@ -29,7 +31,7 @@
         // Build the email content.
         $email_content = "Name: $name\n";
         $email_content .= "Email: $email\n\n";
-        $email_content .= "Company:\n$company\n";
+        $email_content .= "Company:\n$cname\n";
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";
