@@ -23,7 +23,7 @@
     <main class="desktop">
         <img src="./dist/images/chromebook_tab.png" alt="Chromebook Tab">
 
-        <form action="">
+        <form action="./mailer.php" method="POST">
             <h2 id="form__heading">Register</h2>
 
             <!-- User information -->
@@ -68,6 +68,8 @@
             <div class="form__submit-container">
                 <button class="form__submit text__uppercase" type="submit">Submit</button>
             </div>
+
+            <div id="form-messages"></div>
         </form>
     </main>
 
@@ -76,7 +78,7 @@
         <img src="./dist/images/chromebook_tab.png" alt="Chromebook Tab">
     </main>
     <section class="mobileForm__section">
-        <form action="">
+        <form action="./mailer.php" method="POST">
             <h2 id="form__heading">Register</h2>
 
             <!-- User information -->
@@ -122,6 +124,7 @@
                 <button class="form__submit text__uppercase" type="submit">Submit</button>
             </div>
         </form>
+        <div id="form-messages"></div>
     </section>
 
     <footer>
@@ -176,6 +179,9 @@
         </div>
 
     </footer>
+
+    <script src="./lib/jquery-3.3.1.min.js" text="text/javascript"></script>
+    <script src="./dist/js/app.min.js" text="text/javascript"></script>
 </body>
 
 </html>
