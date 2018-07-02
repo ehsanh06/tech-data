@@ -43,6 +43,8 @@ $(() => {
             });
     });
 
+    removeit();
+
     $("button.form__submit").on('click', () => {
 
         let formDataFilled = $('#fname').val().length > 0 && $('#lname').val().length > 0 && $('#company').val().length > 0 && $('#email').val().length > 0 && $('#gdpr').is(":checked");
@@ -59,3 +61,11 @@ $(() => {
     });
 
 });
+
+// If viewport is 820px and below, remove desktop .App__main
+// Simple workaround for bug of Mobile version form 
+function removeit() {
+    if ($(window).width() < 820) {
+        $('body main.desktop').remove();
+    }
+}
