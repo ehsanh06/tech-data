@@ -3,7 +3,15 @@ $(() => {
         formMessages = $('#form-messages'),
         formSuccess = false;
 
-    removeit();
+    // If viewport is 820px and below, remove desktop .App__main
+    // Simple workaround for bug of Mobile version form
+    if ($(window).width() < 820) {
+        $('body main.desktop').remove();
+        form = $('.mobile__form');
+    } else {
+        $('body main.mobile').remove();
+        form = $('.desktop__form')
+    }
 
     // Form event listener
     $(form).on('submit', (e) => {
@@ -62,15 +70,3 @@ $(() => {
     });
 
 });
-
-// If viewport is 820px and below, remove desktop .App__main
-// Simple workaround for bug of Mobile version form 
-function removeit() {
-    if ($(window).width() < 820) {
-        $('body main.desktop').remove();
-        form = $('.mobile__form');
-    } else {
-        $('body main.mobile').remove();
-        form = $('.desktop__form')
-    }
-}
