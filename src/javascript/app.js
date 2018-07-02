@@ -1,5 +1,5 @@
 $(() => {
-    let form = $('form'),
+    let form = $('.App__form'),
         formMessages = $('#form-messages'),
         formSuccess = false;
 
@@ -29,6 +29,8 @@ $(() => {
 
                 // Empty the form
                 $('#fname', '#lname', '#company', '#email').val('');
+
+                console.log(response);
 
             })
             .fail((data) => {
