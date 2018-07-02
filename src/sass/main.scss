@@ -158,10 +158,10 @@ footer {
             li:before {
                 content: ' ';
                 display: inline-block;
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
                 position: absolute;
-                margin: 0 -40px;
+                margin: 0 -30px;
             }
             li.left-col:before {
                 background: #AE1959;
@@ -330,8 +330,8 @@ footer {
                 li:before {
                     content: ' ';
                     display: inline-block;
-                    width: 20px;
-                    height: 20px;
+                    width: 15px;
+                    height: 15px;
                     position: absolute;
                     margin: 0 -40px;
                 }
@@ -361,4 +361,14 @@ footer {
             font-size: 1em;
         }
     }
+        footer {
+            div:last-child {
+                ul {
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
 }
