@@ -1,7 +1,9 @@
 $(() => {
-    let form = $('.App__form'),
+    let form,
         formMessages = $('#form-messages'),
         formSuccess = false;
+
+    removeit();
 
     // Form event listener
     $(form).on('submit', (e) => {
@@ -45,10 +47,7 @@ $(() => {
             });
     });
 
-    removeit();
-
     $("button.form__submit").on('click', () => {
-
         let formDataFilled = $('#fname').val().length > 0 && $('#lname').val().length > 0 && $('#company').val().length > 0 && $('#email').val().length > 0 && $('#gdpr').is(":checked");
         console.log("this: ", $(this));
         console.log('formDataFilled: ' + formDataFilled)
@@ -69,5 +68,9 @@ $(() => {
 function removeit() {
     if ($(window).width() < 820) {
         $('body main.desktop').remove();
+        form = $('.mobile__form');
+    } else {
+        $('body main.mobile').remove();
+        form = $('.desktop__form')
     }
 }
