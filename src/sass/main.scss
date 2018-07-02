@@ -60,10 +60,10 @@ main {
                 cursor: pointer;
             }
             p {
-                font-size: 1em;
+                font-size: 0.75em;
                 color: $font-blue;
                 float: right;
-                width: 90%;
+                width: 80%;
                 padding: 2px;
             }
         }
@@ -98,7 +98,7 @@ main {
             text-align: center;
             width: 165px;
             display: block;
-            margin: 24px auto;
+            margin: 64px auto;
         }
         .form__submit-container .form__submit {
             background: $background-green;
@@ -137,6 +137,40 @@ footer {
             padding: 1em 0 0 0;
         }
     }
+    div:last-child {
+        h2 {
+            width: 65%;
+            margin: 1em auto;
+            margin-bottom: 2em;
+        }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 65%;
+            margin: 0 auto;
+            list-style: none;
+            text-align: left;
+            li {
+                width: 60%;
+                margin: 0 auto;
+            }
+            li:before {
+                content: ' ';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                margin: 0 -40px;
+            }
+            li.left-col:before {
+                background: #AE1959;
+            }
+            li.right-col:before {
+                background: #FFBB3B;
+            }
+        }
+    }
 }
 
 // Media queries
@@ -147,7 +181,6 @@ footer {
         width: 100%;
         background: #fff;
         flex-direction: column;
-
         div {
             width: 50vw;
         }
@@ -179,10 +212,6 @@ footer {
             h2 {
                 margin: 0 0 24px 0;
             }
-            p.text__small {
-                padding: 0 0 28px 0;
-                line-height: 1.15;
-            }
             label {
                 display: block;
                 position: relative;
@@ -200,7 +229,7 @@ footer {
                     font-size: 1em;
                 }
                 p {
-                    font-size: .85em;
+                    font-size: .65em;
                     width: 75%;
                     float: right;
                     margin: 0 auto;
@@ -257,9 +286,7 @@ footer {
                 width: 165px;
                 display: block;
                 margin: 50px auto;
-
             }
-
             .form__submit-container .form__submit {
                 background: $background-green;
                 border-radius: 2px;
@@ -278,22 +305,53 @@ footer {
             }
         }
     }
-
     footer {
         div {
             width: 80%;
+        }
+        div:last-child {
+            h2 {
+                width: 65%;
+                margin: 1em auto;
+                margin-bottom: 2em;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                width: 65%;
+                margin: 0 auto;
+                list-style: none;
+                text-align: left;
+                li {
+                    width: 65%;
+                    margin: 0.5em auto;
+                }
+                li:before {
+                    content: ' ';
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    margin: 0 -40px;
+                }
+                li.left-col:before {
+                    background: #AE1959;
+                }
+                li.right-col:before {
+                    background: #FFBB3B;
+                }
+            }
         }
     }
 }
 
 @media only screen and (max-width: 320px) {
-
     .mobileForm__section form {
         width: 75%;
         margin: 0 auto;
         border: 1px solid #000;
         padding: 24px;
-        
         label input[type=email],
         label input[type=text] {
             width: 85%;
@@ -303,5 +361,4 @@ footer {
             font-size: 1em;
         }
     }
-
 }
