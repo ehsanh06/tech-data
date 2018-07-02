@@ -137,7 +137,7 @@ footer {
             padding: 1em 0 0 0;
         }
     }
-    div:last-child {
+    div:nth-child(5) {
         h2 {
             width: 65%;
             margin: 1em auto;
@@ -309,7 +309,7 @@ footer {
         div {
             width: 80%;
         }
-        div:last-child {
+        div:nth-child(5) {
             h2 {
                 width: 65%;
                 margin: 1em auto;
@@ -362,7 +362,7 @@ footer {
         }
     }
         footer {
-            div:last-child {
+            div:nth-child(5) {
                 ul {
                     li {
                         width: 100%;
