@@ -6,7 +6,7 @@
         // Get the form fields and remove whitespace.
         $fname = strip_tags(trim($_POST["fname"]));
         $lname = strip_tags(trim($_POST["lname"]));
-        $name = str_replace(array("\r","\n"),array($name + $lname);
+        $name = array($name + $lname);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $company = trim($_POST["company"]);
 
